@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piggi - Menú Principal</title>
+    <link rel="stylesheet" href="Pagina3.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <!-- Botón del menú -->
+        <div class="menu" id="menuButton">
+            <span>&#9776;</span>
+        </div>
+        <div class="logo">PIGGI</div>
+        <div class="admin">ADMIN</div>
+        <div class="profile">
+            <img src="Daniela.jpg" alt="Foto de perfil">
+        </div>
+    </header>
+
+    <!-- Menú desplegable -->
+    <nav class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li><a href="registro_horas.html">Registro de horas</a></li>
+            <li><a href="llamados_atencion.html">Llamados de atención</a></li>
+            <li><a href="certificados.html">Certificados</a></li>
+            <li><a href="beneficios.html">Beneficios</a></li>
+            <li><a href="vacantes_internas.html">Vacantes internas</a></li>
+            <li><a href="administrar_usuario.html">Administrar usuario</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="card-container">
+            <div class="card" onclick="window.location.href='registro_horas.html'">
+                <h3>Registro de horas / establecer horario</h3>
+                <img src="Cuaderno.png" alt="Ícono de registro">
+            </div>
+            <div class="card" onclick="window.location.href='llamados_atencion.html'">
+                <h3>Llamados de atención / memorandos</h3>
+                <img src="llamado.png" alt="Ícono de atención">
+            </div>
+            <div class="card" onclick="window.location.href='certificados.html'">
+                <h3>Certificados</h3>
+                <img src="certificado.jpg" alt="Ícono de certificados">
+            </div>
+            <div class="card" onclick="window.location.href='beneficios.html'">
+                <h3>Beneficios</h3>
+                <img src="beneficio.jpg" alt="Ícono de beneficios">
+            </div>
+            <div class="card" onclick="window.location.href='vacantes_internas.html'">
+                <h3>Vacantes internas</h3>
+                <img src="vacante.jpg" alt="Ícono de vacantes">
+            </div>
+            <div class="card" onclick="window.location.href='administrar_usuario.html'">
+                <h3>Administrar usuario</h3>
+                <img src="usuario.jpg" alt="Ícono de usuario">
+            </div>
+        </div>
+    </main>
+
+    <!-- Script para funcionalidad del menú -->
+    <script>
+        // Selección de elementos
+        const menuButton = document.getElementById('menuButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        // Alternar visibilidad del menú
+        menuButton.addEventListener('click', () => {
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+            } else {
+                dropdownMenu.style.display = 'block';
+            }
+        });
+
+        // Cerrar el menú si se hace clic fuera de él
+        document.addEventListener('click', (event) => {
+            if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
+

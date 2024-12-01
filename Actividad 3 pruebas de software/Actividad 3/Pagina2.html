@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piggy - Búsqueda de Usuario</title>
+    <link rel="stylesheet" href="pagina2.css">
+</head>
+<body>
+    <!-- Encabezado con menú -->
+    <header class="header">
+        <!-- Botón del menú -->
+        <div class="menu" id="menuButton">
+            <span>&#9776; Menú</span>
+        </div>
+        <div class="logo">PIGGY</div>
+    </header>
+
+    <!-- Menú desplegable -->
+    <nav class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li><a href="pagina2.html">Inicio</a></li>
+            <li><a href="registro_horas.html">Registro de horas</a></li>
+            <li><a href="certificados.html">Certificados</a></li>
+            <li><a href="beneficios.html">Beneficios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Formulario de búsqueda -->
+    <main class="main-content">
+        <div class="search-box">
+            <h2>BÚSQUEDA DE USUARIO</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Ej. Fulanito Cortes" required>
+                </div>
+                <div class="form-group">
+                    <label for="documento">Número de documento</label>
+                    <input type="text" id="documento" placeholder="100658469" required>
+                </div>
+                <button onclick="window.location.href='pagina3.html';">Ingresar</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-section">
+            <h4>Consúltanos</h4>
+            <p>En todos los canales a disposición</p>
+            <p>servicioalcliente@piggi.com</p>
+            <p>Políticas de cumplimiento legal</p>
+        </div>
+        <div class="footer-section">
+            <h4>Llámanos</h4>
+            <p>En Bogotá: +57 3105555555</p>
+            <p>Línea Nacional: 01 8000 555 555</p>
+            <p>Sede Administrativa: +6015555555</p>
+        </div>
+        <div class="footer-section">
+            <h4>Visítanos</h4>
+            <p>Carrera 100 a # 61-61 a sur</p>
+        </div>
+    </footer>
+</body>
+</html>
+
